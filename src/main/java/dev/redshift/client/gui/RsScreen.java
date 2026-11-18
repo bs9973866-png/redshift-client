@@ -17,14 +17,18 @@ public abstract class RsScreen extends Screen {
         ANIMATIONS("Animations", AnimationsScreen::new),
         HUD_EDITOR("HUD Editor", HudEditorScreen::new),
         PROFILES("Server Profiles", ProfilesScreen::new),
-        SETTINGS("Settings", () -> new SettingsScreen(Page.SETTINGS, "")),
-        PERFORMANCE("Performance", () -> new SettingsScreen(Page.PERFORMANCE, "Performance")),
+        SETTINGS("Settings", () -> new SettingsScreen(settingsPage("SETTINGS"), "")),
+        PERFORMANCE("Performance", () -> new SettingsScreen(settingsPage("PERFORMANCE"), "Performance")),
         ABOUT("About REDSHIFT", AboutScreen::new);
 
         final String label;
         final Supplier<Screen> factory;
 
         Page(String label, Supplier<Screen> factory) { this.label = label; this.factory = factory; }
+    }
+
+    private static Page settingsPage(String name) {
+        return Page.valueOf(name);
     }
 
     private final Page page;
