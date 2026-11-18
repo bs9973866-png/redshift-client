@@ -1,0 +1,8 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.redshift.client.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": ["ItemInHandRendererMixin"],
+  "injectors": { "defaultRequire": 1 }
+}

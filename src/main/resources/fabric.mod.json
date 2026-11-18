@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "id": "redshift",
+  "version": "${version}",
+  "name": "REDSHIFT CLIENT",
+  "description": "Visual client: HUD, swing animations, cosmetic effects, server profiles. Visual only, no cheats.",
+  "authors": ["REDSHIFT"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": { "client": ["dev.redshift.client.RedshiftClient"] },
+  "mixins": ["redshift.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
